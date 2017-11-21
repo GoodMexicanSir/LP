@@ -5,42 +5,26 @@
 */
 
 import javax.swing.JOptionPane;
-public class tarea8{
+public class tarea9{
 	public static void main (String[] args){
 		String entrada;
-		int x,y,z;
-		Double a,b;
-		String[] options={"1","2","3","4","Salir"};
-		int v = JOptionPane.showOptionDialog(null,"Selecciona el numero de la figura cuya area quieres calcular\n 1.- Cuadrado\n 2.- Rectangulo\n 3.- Triangulo\n 4.- Circulo","Numeros",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[0]);
+		int x;
+		Double a;
+		String[] options={"1","2","Salir"};
+		int v = JOptionPane.showOptionDialog(null,"Convertir\n 1.- De grados Celcius a Farenheit\n 2.- De grados Farenheit a Celcius","Grados",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[0]);
 
 		switch(v){
 			case 0:
-				entrada = JOptionPane.showInputDialog("Ingrese la longitud del lado: ");
+				entrada = JOptionPane.showInputDialog("Ingrese los grados a convertir: ");
 				x = Integer.parseInt(entrada);
-				y = x*x;
-				JOptionPane.showMessageDialog(null,"El area del cuadrado es "+y);
+				a = (x*1.8) + 32;
+				JOptionPane.showMessageDialog(null,+x+" grados Celcius equivalen a "+a+" grados Farenheit");
 				break;
 			case 1:
-				entrada = JOptionPane.showInputDialog("Ingrese la longitud de la base: ");
+				entrada = JOptionPane.showInputDialog("Ingrese los grados a convertir: ");
 				x = Integer.parseInt(entrada);
-				entrada = JOptionPane.showInputDialog("Ingrese la longitud de la altura: ");
-				y = Integer.parseInt(entrada);
-				z = x*y;
-				JOptionPane.showMessageDialog(null,"El area del rectangulo es "+z);
-				break;
-			case 2:
-				entrada = JOptionPane.showInputDialog("Ingrese la longitud de la base: ");
-				x = Integer.parseInt(entrada);
-				entrada = JOptionPane.showInputDialog("Ingrese la longitud de la altura: ");
-				y = Integer.parseInt(entrada);
-				z = (x*y)/2;
-				JOptionPane.showMessageDialog(null,"El area del triangulo es "+z);
-				break;
-			case 3:
-				entrada = JOptionPane.showInputDialog("Ingrese la longitud del radio: ");
-				a = Double.parseDouble(entrada);
-				b = (3.1416*a)/2.0;
-				JOptionPane.showMessageDialog(null,"El area del circulo es "+b);
+				a = (x - 32)/1.8;
+				JOptionPane.showMessageDialog(null,+x+" grados Farenheit equivalen a "+a+" grados Celcius");
 				break;
 			default:
 			break;
