@@ -41,4 +41,4 @@ public class tarea10{
 			break;
 		}//Fin de switch
 	} //Fin de función main
-} //Fin de clase tarea8
+} //Fin de clase tarea10

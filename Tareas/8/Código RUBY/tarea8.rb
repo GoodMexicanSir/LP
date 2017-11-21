@@ -14,7 +14,7 @@ begin
 	print("\t4.- Calcular area de Circulo\n")
 	print("\t5.- Salir\n")
 	print("\nSelecciona una opción --> ")
-	n=gets().to_i
+	n = gets().to_i
 
 	case n
 		when 1

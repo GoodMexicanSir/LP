@@ -28,6 +28,6 @@ public class tarea9{
 				break;
 			default:
 			break;
-		}//Fin de switch
+		} //Fin de switch
 	} //Fin de función main
-} //Fin de clase tarea8
+} //Fin de clase tarea9
