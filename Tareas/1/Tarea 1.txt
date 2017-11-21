@@ -1,0 +1,44 @@
+¿Qué es un paradigma?
+
+	PARADIGMA del Griego Paradeima = Modelo, tipo, Ejemplo.
+ 
+	Un paradigma define un conjunto de reglas, patrones y estilos de
+	programación que son usados por un grupo de lenguajes de
+ 	programación
+
+	En la ciencia, un Paradigma es un conjunto de realizaciones
+ 	científicas "universalmente" reconocidas, que durante un 
+	tiempo proporcionan modelos de problemas y soluciones a 
+	una comunidad científica.
+
+ 	En el campo de las ciencias, esto es una secuencia en espiral;
+	 un paradigma inicial forma un estadio de ciencia normal 
+ 	sigue una crisis que desestabiliza el paradigma 
+ 	se crea una revolución científica nueva 
+ 	se establece un nuevo paradigma 
+ 	que forma una nueva ciencia formal normal.
+
+¿Cuales son los paradigmas de lenguajes de programación?
+
+	Paradigma funcional
+		La computación se realiza mediante la evaluación de expresiones
+		Definición de funciones
+		Funciones como datos primitivos
+		Valores sin efectos laterales, no existe la asignación
+		Programación declarativa
+		Lenguajes: LISP, Scheme, Haskell, Scala, etc.
+	Paradigma lógico
+		Definición de reglas
+		Unificación como elemento de computación
+		Programación declarativa
+		Lenguajes: Prolog, Mercury, Oz.
+	Paradigma imperativo
+		Definición de procedimientos
+		Definición de tipos de datos
+		Chequeo de tipos en tiempo de compilación
+		Cambio de estado de variables
+		Pasos de ejecución de un proceso
+	Paradigma orientado a objetos
+		Definición de clases y herencia
+		Objetos como abstracción de datos y procedimientos
+		Polimorfismo y chequeo de tipos en tiempo de ejecución

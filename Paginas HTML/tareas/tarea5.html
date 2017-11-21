@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 5</title>
+	<meta charset="UTF-8">
+	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div class="barraN">
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<tr>
+		<div id="cambiar">
+			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
+			<a href="tarea4.html" title="Anterior">4 «</a>
+			<bold class="actual">5</bold>
+			<a href="tarea6.html" title="Siguiente">» 6</a>
+	</div>
+	<div class="pagina">
+		<div class="caja">
+			<a class="Letrero">Tarea 5</a>
+		</div>
+		<div class="caja">
+			<p class="texto">
+				<h1>Scheme </h1>
+				<h3>Símbolos, sintáxis, esqueleto de los programas</h3>
+
+				Símbolos:<br><br>
+				Un símbolo es lo que en otros lenguajes se denomina identificador. En Scheme los símbolos e identificadores pueden contener caracteres internacionales (Unicode, UTF-8). El intérprete DrScheme guarda los ficheros de texto en esa codificación. 
+				Diferencia entre símbolos y cadenas: un símbolo (identificador) es un objeto simple y una cadena es un objeto compuesto. El intérprete de Scheme codifica un símbolo mediante un único número, su valor hash. Otra diferencia bastante clara: un símbolo no puede contener un espacio, pero una cadena sí.<br>
+				<ul>
+					<li>Operadores matemáticos</li>
+					<ul>
+						<li>+ Suma cada uno de los argumentos</li>
+						<li>* Multiplica cada uno de los argumentos</li>
+						<li>- Primer argumento menos los restantes o negación del número</li>
+						<li>/ Primer argumento entre cada uno de los restantes</li>
+						<li>abs Valor absoluto del argumento</li>
+						<li>exp Exponencial</li>
+						<li>expt Dados dos argumentos: x e y</li>
+						<li>max Máximo de sus argumentos</li>
+						<li>min Mínimo de sus argumentos</li>
+						<li>sqrt Raíz cuadrada del argumento no negativo</li>
+					</ul>
+				</ul>
+				<ul>
+					<li>Operadores de comparación</li>
+					<ul>
+						<li>= Igual (átomos numéricos)</li>
+						<li>> Mayor que</li>
+						<li>< Menor que</li>
+						<li>>= Mayor o igual</li>
+						<li><= Menor o igual</li>
+						<li>even? ¿Es Número par?</li>
+						<li>odd? ¿Es Número impar?</li>
+						<li>zero? ¿Número cero?</li>
+					</ul>
+				</ul>
+				<ul>
+					<li>Funciones para manipular listas</li>
+					<ul>
+						<li>car Devuelve el primer elemento de la lista.</li>
+						<li>cdr Devuelve la lista eliminando su primer elemento.</li>
+						<li>cons Lista formada con el primer argumento más los elementos del segundo.</li>
+						<li>list Lista con los parámetros pasados en orden.</li>
+					</ul>
+				</ul>
+				<ul>
+					<li>Funciones de comparación</li>
+					<ul>
+						<li>eq? TRUE si ambos argumentos son átomos e iguales. FALSE en caso contrario.</li>
+						<li>null? TRUE si su único argumento es una lista vacía. FALSE en caso contrario.</li>
+						<li>list? TRUE si su único argumento es una lista. FALSE en caso contrario.</li>
+						<li>equal? TRUE si ambos argumentos son iguales. FALSE en caso contrario</li>
+					</ul>
+				</ul>
+				Sintáxis:
+				<ul>
+					<li>Para agregar un comentario en Scheme se inicia con un punto y coma (;) y continúan hasta el final de la línea.</li>
+					<li>Variables -> Para asociarlas a un valor concreto, podemos usar define, una expresión let, o alguna de sus variantes.</li>
+					<li>expresión -> átomo | lista</li>
+					<li>átomo ->  número | string | identificador | carácter | boolean</li>
+					<li>lista -> '('   secuencia-expresión ')'</li>
+					<li>secuencia-expresión -> expresión secuencia-expresión | expresión</li>
+					<li>función -> ( nombre_función   argumento 1 argumento 2  ... argumento n )</li> 
+				</ul>
+				Esqueleto:<br><br>
+				El lenguaje se interpreta por lo que solo es necesario escribir las instrucciones a realizar
+<pre>
+	; Hello World in Scheme
+
+	(display "Hello, world!")
+	(newline)
+</pre>
+
+				<h3>Aplicacion a descargar para editar y ejecutar</h3>
+				Utiliza tu editor de texto favorito para modificar y escribir código!<br>
+				Interprete de Scheme: <a href="http://download.plt-scheme.org/" target="_blank">link</a>
+				<h3>Tipo de paradigma al que pertenece</h3>
+				Paradigma funcional
+				<h3>Ejemplo de programa</h3>
+				Programa que imprime un triángulo:
+<pre>
+	(define (T) ;lo que hacemos con esta función es la figura con la que se ;llenara el triángulo
+	(display "*"))
+
+	(define (dibuje cant) ;esta funcion me dibuja los "*" pasando un espacio :entre ellos
+   	(do ((i 0 (+ i 1)))
+    	((= i cant) )
+    	(t)
+    	(display " ")))
+
+	(define (triangulo) ;y esta es la que me dibuja el triangulo aquí defino ;que el tamaño sea de 10 *'s
+   	(do ((i 1 (+ i 1)));observa como se hace el ciclo :D
+    	((= i 10) )
+    	(dibuje i);llamada a la funcion
+    	(newline)));pasa renglon
+</pre>
+			</p>
+		</div>
+	</div>
+	<div class="pie">
+		<p>&copy; 2017 || 1737535 
+	</div>
+</body>
+</html>

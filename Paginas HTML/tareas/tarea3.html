@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 3</title>
+	<meta charset="UTF-8">
+	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div class="barraN">
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<tr>
+		<div id="cambiar">
+			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
+			<a href="tarea2.html" title="Anterior">2 «</a>
+			<bold class="actual">3</bold>
+			<a href="tarea4.html" title="Siguiente">» 4</a>
+	</div>
+	<div class="pagina">
+		<div class="caja">
+			<a class="Letrero">Tarea 3</a>
+		</div>
+		<div class="caja">
+			<p class="texto">
+				<h1>Prolog</h1>
+				<h3>Símbolos, sintáxis, esqueleto de los programas</h3>
+
+				Símbolos:
+				<ul>
+					<li>Los símbolos de predicado y de función (excepto algunos predefinidos) se denotarán mediante una cadena de letras minúsculas (se puede incluir los caracteres numéricos y el ‘_’) donde el primer carácter deberá ser necesariamente una letra minúscula.</li>
+
+					<li>Los símbolos de constante de igual forma que los anteriores, excepto las constantes numéricas que se representarán directamente.
+					</li>
+					<li>Las variables se denotarán como cadenas de caracteres (letras, números y algunos símbolos como ‘_’ o ‘?’), siendo el primer carácter una letra mayúscula.</li>
+				</ul>
+
+				Sintáxis:<br><br>
+				Los hechos son las sentencias más sencillas. Un hecho es una fórmula
+				atómica o átomo: p(t1, ..., tn) e indica que se verifica la relación
+				(predicado) p sobre los objetos (términos) t1, ..., tn. 
+
+				Un conjunto de hechos constituye un programa (la forma más simple de
+				programa lógico)
+
+				Un axioma es un hecho con variable.En ellos, las variables se consideran cuantificadas universalmente. Es decir, ∀x suma(0, x, x).
+
+				Las reglas son sentencias de la forma: A :- B1 , ... , Bn . donde A y
+				cada Bi son átomos. A es la cabeza de la regla y los Bi's componen el 
+				cuerpo de la regla. 
+
+				Una lista es una secuencia ordenada de elementos que puede tener cualquier longitud. La forma sintáctica para describir una lista con cabeza X y resto Y es la notación [X|Y].<br><br>
+
+				Esqueleto:<br>
+<pre>
+	$ swipl
+	Welcome to SWI-Prolog ...
+	...
+
+	1 ?-
+</pre>
+				Se puede abrir un programa previamente creado para su consulta
+				de dos formas:
+<pre>
+	?- [likes].
+	true.
+
+	?-
+	<hr>
+	$ swipl likes.pl
+	Welcome to SWI-Prolog ...
+	...
+
+	1 ?-
+</pre>
+Añadir reglas
+<pre>
+	?- [user].
+	|: hello :- format('Hello world~n').
+	|: ^D
+	true.
+
+	?- hello.
+	Hello world
+	true.
+</pre>
+				<h3>Aplicacion a descargar para editar y ejecutar</h3>
+				Utiliza tu editor de texto favorito para modificar y escribir código!<br>
+				Interprete de Prolog: <a href="http://www.swi-prolog.org/download/stable" target="_blank">link</a>
+				<h3>Tipo de paradigma al que pertenece</h3>
+				Paradigma lógico
+				<h3>Ejemplo de programa</h3>
+<pre>
+	/* ancestor(A, B) significa que A es ancestro de B. */
+	ancestor(bob, susan).
+	ancestor(A, X) :- parent(A, X).
+	ancestor(A, X) :- parent(A, C), ancestor(C, X).
+
+	/* padre(P, C) significa que P es padre de C. */
+	parent(fred, sally).
+	parent(tina, sally).
+	parent(sally, john).
+	parent(sally, diane).
+	parent(sam, bill).
+</pre>
+Ejecutamos el programa y podemos realizar preguntas como:
+<pre>
+	?- ancestor(X,sally)
+	Para obtener resultados:
+	X = fred .
+</pre>
+			</p>
+		</div>
+	</div>
+	<div class="pie">
+		<p>&copy; 2017 || 1737535 
+	</div>
+</body>
+</html>

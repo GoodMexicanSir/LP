@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea 6</title>
+	<meta charset="UTF-8">
+	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div class="barraN">
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<tr>
+		<div id="cambiar">
+			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
+			<a href="tarea5.html" title="Anterior">5 «</a>
+			<bold class="actual">6</bold>
+			<a href="tarea7.html" title="Siguiente">» 7</a>
+	</div>
+	<div class="pagina">
+		<div class="caja">
+			<a class="Letrero">Tarea 6</a>
+		</div>
+		<div class="caja">
+			<p class="texto">
+				<h1>Haskell</h1>
+				<h3>Símbolos, sintáxis, esqueleto de los programas</h3>
+
+				Símbolos:<br><br>
+					Clases de tipos:
+					<ul>
+						<li>El tipo Bool</li>
+							<ul>
+								<li>(&&):: Bool -> Bool -> Bool.</li>
+								<li>(||):: Bool -> Bool -> Bool.</li>
+								<li>not:: Bool -> Bool -> Bool.</li>
+								<li>otherwise:: Bool.</li>
+							</ul>
+						<li>El tipo Int</li>
+							<ul>
+								<li>(+),(-),(*):: Int -> Int -> Int.</li>
+								<li>(↑):: Int -> Int -> Int.</li>
+								<li>div, mod:: Int -> Int -> Int.</li>
+								<li>abs:: Int -> Int.</li>
+								<li>signum:: Int -> Int.</li>
+								<li>negate:: Int -> Int.</li>
+								<li>even, odd:: Int -> Bool.</li>
+							</ul>
+						<li>El tipo Float</li>
+							<ul>
+								<li>(+),(*),(-),(/)</li>
+								<li>	:: Float -> Float -> Float.</li>
+								<li>(↑):: Float -> Float -> Float.</li>
+								<li>(**):: Float -> Float -> Float.</li>
+								<li>sin, asin, cos, acos, tan, atan:: Float -> Float -> Float.</li>
+								<li>atan2:: Float -> Float -> Float.</li>
+								<li>log, log10, exp:: Float -> Float -> Float.</li>
+								<li>sqrt:: Float -> Float -> Float.</li>
+							</ul>
+						<li>El tipo Char</li>
+							<ul>
+								<li>ord:: Char -> Int.</li>
+								<li>chr:: Int -> Char.</li>
+								<li>isUpper, isLower, isDigit, isAlpha:: Char -> Bool.</li>
+								<li>toUpper, toLower:: Char -> Char.</li>
+							</ul>
+						<li>Eq es utilizada por los tipos que soportan comparaciones por igualdad. </li>
+						<li>Ord es para tipos que poseen algún orden.</li>
+						<li>Show pueden ser representados por cadenas.</li>
+						<li>Read es como la clase de tipos opuesta a Show.</li>
+						<li>Enum son tipos secuencialmente ordenados, es decir, pueden ser enumerados.</li>
+						<li>Bounded poseen límites inferiores y superiores, es decir están acotados.</li>
+						<li>Num es la clase de tipos numéricos. Sus miembros tienen la propiedad de poder comportarse como números.</li>
+						<li>Integral es también un clase de tipos numérica. Num incluye todos los números, incluyendo números reales y enteros.</li>
+						<li>Floating incluye únicamente números en coma flotante, es decir Float y Double.</li>
+					</ul>
+				Sintáxis:
+					<ul>
+						<li>Comentarios de una sola l ́ınea: comienzan por dos guiones consecutivos (– –) y abarcan hasta el final de la l ́ınea actual</li>
+						<li>Comentarios que abarcan m as de una línea: Comienzan por los caracteres {− y acaba con −}. Pueden abarcar varias líneas y anidarse</li>
+						<li>Este lenguaje identifica el tipo de dato por si mismo, para verificarlo se puede escribir :t</li>
+<pre>
+	ghci> :t 'a'
+	'a' :: Char
+	ghci> :t True
+	True :: Bool
+	ghci> :t "HOLA!"
+	"HELLO!" :: [Char]
+	ghci> :t (True, 'a')
+	(True, 'a') :: (Bool, Char)
+	ghci> :t 4 == 5
+	4 == 5 :: Bool
+</pre>
+						<li>Las funciones también tiene tipos. Cuando escribimos nuestras propias funciones podemos darles un tipo explícito en su declaración.</li>
+<pre>
+	removeNonUppercase :: [Char] -> [Char]
+	removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
+</pre>
+					</ul>
+				Esqueleto:<br><br>
+				Una vez instalado el compilador se pueden escribir directamente las instrucciones, por ejemplo:<br>
+<pre>
+	GHCi, version 8.2.1: http://www.haskell.org/ghc/  :? for help
+	Prelude> 2 + 15
+	17
+</pre>
+				Donde 2 + 15 es la instrucción y 17 es el resultado de la ejecución.
+				<h3>Aplicacion a descargar para editar y ejecutar</h3>
+				Utiliza tu editor de texto favorito para modificar y escribir código!<br>
+				Compilador de Haskell: <a href="https://www.haskell.org/downloads" target="_blank">link</a>
+				<h3>Tipo de paradigma al que pertenece</h3>
+				Paradigma funcional
+				<h3>Ejemplo de programa</h3>
+				Función simple que realiza el cálculo bajo las instrucciones dadas, con una pequeña modificación a la función:
+<pre>
+	GHCi, version 8.2.1: http://www.haskell.org/ghc/  :? for help
+	Prelude> doubleSmallNumber x = if x > 100
+        		then x
+                else x*2
+	Prelude> doubleSmallNumber' x = (if x > 100 then x else x*2) + 1
+	Prelude> doubleSmallNumber' 30
+	61
+	Prelude> 
+</pre>
+			</p>
+		</div>
+	</div>
+	<div class="pie">
+		<p>&copy; 2017 || 1737535 
+	</div>
+</body>
+</html>

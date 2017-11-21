@@ -1,0 +1,38 @@
+Definición de lenguaje de programación:
+	Un lenguaje de programación es un conjunto de caracteres, reglas
+	para combinarlos y reglas que especifican sus efectos cuando son
+	ejecutados por una computadora, que tienen las siguientes cuatro 
+	características:
+	- No requiere conocimiento del código de máquina por parte del usuario
+	- Tiene independencia de la máquina
+	- Está traducido al lenguaje de máquina
+	- Emplea una notación más cercana a la del problema específico que
+	se está resolviendo que el código de máquina.
+
+Clasificación de los lenguajes de alto nivel:
+	Lenguaje de alto nivel se refiere al nivel más alto de abstracción
+	de lenguaje de máquina.
+
+	Lenguajes de programación imperativos
+	Lenguajes de programación declarativos
+	Lenguajes de programación orientados a objetos
+	Lenguajes de programación orientados al problema
+	Lenguajes de programación naturales
+
+Ejemplos de lenguajes:
+	a)Interpretados
+		Ruby
+		Python
+		PHP
+	b)Compilados
+		C
+		Pascal
+		Visual Basic
+	c)Orientados a objetos
+		C++
+		Java
+		Perl
+	d)Funcionales
+		R
+		Haskell
+		Erlang

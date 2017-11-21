@@ -1,0 +1,92 @@
+Scheme
+
+Símbolos, sintáxis, esqueleto de los programas
+
+Símbolos:
+
+Un símbolo es lo que en otros lenguajes se denomina identificador. 
+En Scheme los símbolos e identificadores pueden contener caracteres internacionales 
+(Unicode, UTF-8). El intérprete DrScheme guarda los ficheros de texto en esa codificación. 
+Diferencia entre símbolos y cadenas: un símbolo (identificador) es un objeto simple y 
+una cadena es un objeto compuesto. El intérprete de Scheme codifica un símbolo mediante 
+un único número, su valor hash. Otra diferencia bastante clara: un símbolo no puede 
+contener un espacio, pero una cadena sí.
+
+    Operadores matemáticos
+        + Suma cada uno de los argumentos
+        * Multiplica cada uno de los argumentos
+        - Primer argumento menos los restantes o negación del número
+        / Primer argumento entre cada uno de los restantes
+        abs Valor absoluto del argumento
+        exp Exponencial
+        expt Dados dos argumentos: x e y
+        max Máximo de sus argumentos
+        min Mínimo de sus argumentos
+        sqrt Raíz cuadrada del argumento no negativo
+
+    Operadores de comparación
+        = Igual (átomos numéricos)
+        > Mayor que
+        < Menor que
+        >= Mayor o igual
+        <= Menor o igual
+        even? ¿Es Número par?
+        odd? ¿Es Número impar?
+        zero? ¿Número cero?
+
+    Funciones para manipular listas
+        car Devuelve el primer elemento de la lista.
+        cdr Devuelve la lista eliminando su primer elemento.
+        cons Lista formada con el primer argumento más los elementos del segundo.
+        list Lista con los parámetros pasados en orden.
+
+    Funciones de comparación
+        eq? TRUE si ambos argumentos son átomos e iguales. FALSE en caso contrario.
+        null? TRUE si su único argumento es una lista vacía. FALSE en caso contrario.
+        list? TRUE si su único argumento es una lista. FALSE en caso contrario.
+        equal? TRUE si ambos argumentos son iguales. FALSE en caso contrario
+
+Sintáxis:
+
+    Para agregar un comentario en Scheme se inicia con un punto y coma (;) y continúan hasta el final de la línea.
+    Variables -> Para asociarlas a un valor concreto, podemos usar define, una expresión let, o alguna de sus variantes.
+    expresión -> átomo | lista
+    átomo -> número | string | identificador | carácter | boolean
+    lista -> '(' secuencia-expresión ')'
+    secuencia-expresión -> expresión secuencia-expresión | expresión
+    función -> ( nombre_función argumento 1 argumento 2 ... argumento n )
+
+Esqueleto:
+
+El lenguaje se interpreta por lo que solo es necesario escribir las instrucciones a realizar
+
+	; Hello World in Scheme
+
+	(display "Hello, world!")
+	(newline)
+
+Aplicacion a descargar para editar y ejecutar
+	Utiliza tu editor de texto favorito para modificar y escribir código!
+	Interprete de Scheme: http://download.plt-scheme.org/
+
+Tipo de paradigma al que pertenece
+	Paradigma funcional
+
+Ejemplo de programa
+
+Programa que imprime un triángulo:
+
+	(define (T) ;lo que hacemos con esta función es la figura con la que se ;llenara el triángulo
+	(display "*"))
+
+	(define (dibuje cant) ;esta funcion me dibuja los "*" pasando un espacio :entre ellos
+   	(do ((i 0 (+ i 1)))
+    	((= i cant) )
+    	(t)
+    	(display " ")))
+
+	(define (triangulo) ;y esta es la que me dibuja el triangulo aquí defino ;que el tamaño sea de 10 *'s
+   	(do ((i 1 (+ i 1)));observa como se hace el ciclo :D
+    	((= i 10) )
+    	(dibuje i);llamada a la funcion
+    	(newline)));pasa renglon
