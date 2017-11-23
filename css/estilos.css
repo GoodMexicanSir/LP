@@ -39,6 +39,17 @@
     padding: 0 21px 0;
     list-style: none;
 }
+.perso{
+	display: block;
+    margin: 0;
+    text-align: center;
+    padding: 21px;
+    text-transform: uppercase;
+	text-decoration: none;
+}
+.perso:hover{
+    background-color: rgba(23, 191, 195, 0.5); /*Sombreado botones*/
+}
 .links > li{
     float: left;
 }
@@ -53,10 +64,10 @@
 	outline: none;
 }
 .caja{
-    padding: 60px 0;
+    padding: 30px 0;
     width: 100%;
     display: flex;
-    min-height: 80%;
+    min-height: 90%;
     margin: auto;
 }
 .cajaP{
@@ -102,8 +113,27 @@ h4{
     border-bottom: solid 1px #E1E1E1;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(242,36,94);
 }
 .M{
     width: 50%;
     color: black;
+}
+.P{
+  position: relative;
+  width: 221px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  box-sizing: border-box;
+  height: 463px;
+}
+.B{
+    margin: 0;
+    padding: 30px 0;
+}
+.espacio{
+    border-top: 1px solid #E1E1E1; /*linea divisoria*/
+    padding-top: 30px;
+    margin: 0 21px;
 }
