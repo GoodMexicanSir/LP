@@ -6,22 +6,24 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea5.html" title="Anterior">5 «</a>
-			<bold class="actual">6</bold>
-			<a href="tarea7.html" title="Siguiente">» 7</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 6</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea5.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea7.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 6</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
-				<h1>Haskell</h1>
+				<h1>Haskell</h1><hr>
 				<h3>Símbolos, sintáxis, esqueleto de los programas</h3>
 
 				Símbolos:<br><br>
@@ -33,7 +35,7 @@
 								<li>(||):: Bool -> Bool -> Bool.</li>
 								<li>not:: Bool -> Bool -> Bool.</li>
 								<li>otherwise:: Bool.</li>
-							</ul>
+							</ul><br>
 						<li>El tipo Int</li>
 							<ul>
 								<li>(+),(-),(*):: Int -> Int -> Int.</li>
@@ -43,7 +45,7 @@
 								<li>signum:: Int -> Int.</li>
 								<li>negate:: Int -> Int.</li>
 								<li>even, odd:: Int -> Bool.</li>
-							</ul>
+							</ul><br>
 						<li>El tipo Float</li>
 							<ul>
 								<li>(+),(*),(-),(/)</li>
@@ -54,14 +56,14 @@
 								<li>atan2:: Float -> Float -> Float.</li>
 								<li>log, log10, exp:: Float -> Float -> Float.</li>
 								<li>sqrt:: Float -> Float -> Float.</li>
-							</ul>
+							</ul><br>
 						<li>El tipo Char</li>
 							<ul>
 								<li>ord:: Char -> Int.</li>
 								<li>chr:: Int -> Char.</li>
 								<li>isUpper, isLower, isDigit, isAlpha:: Char -> Bool.</li>
 								<li>toUpper, toLower:: Char -> Char.</li>
-							</ul>
+							</ul><br>
 						<li>Eq es utilizada por los tipos que soportan comparaciones por igualdad. </li>
 						<li>Ord es para tipos que poseen algún orden.</li>
 						<li>Show pueden ser representados por cadenas.</li>
@@ -77,7 +79,7 @@
 						<li>Comentarios de una sola l ́ınea: comienzan por dos guiones consecutivos (– –) y abarcan hasta el final de la l ́ınea actual</li>
 						<li>Comentarios que abarcan m as de una línea: Comienzan por los caracteres {− y acaba con −}. Pueden abarcar varias líneas y anidarse</li>
 						<li>Este lenguaje identifica el tipo de dato por si mismo, para verificarlo se puede escribir :t</li>
-<pre>
+<pre class="consola">
 	ghci> :t 'a'
 	'a' :: Char
 	ghci> :t True
@@ -90,14 +92,14 @@
 	4 == 5 :: Bool
 </pre>
 						<li>Las funciones también tiene tipos. Cuando escribimos nuestras propias funciones podemos darles un tipo explícito en su declaración.</li>
-<pre>
+<pre class="consola">
 	removeNonUppercase :: [Char] -> [Char]
 	removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
 </pre>
 					</ul>
 				Esqueleto:<br><br>
 				Una vez instalado el compilador se pueden escribir directamente las instrucciones, por ejemplo:<br>
-<pre>
+<pre class="consola">
 	GHCi, version 8.2.1: http://www.haskell.org/ghc/  :? for help
 	Prelude> 2 + 15
 	17
@@ -110,7 +112,7 @@
 				Paradigma funcional
 				<h3>Ejemplo de programa</h3>
 				Función simple que realiza el cálculo bajo las instrucciones dadas, con una pequeña modificación a la función:
-<pre>
+<pre class="consola">
 	GHCi, version 8.2.1: http://www.haskell.org/ghc/  :? for help
 	Prelude> doubleSmallNumber x = if x > 100
         		then x
@@ -121,6 +123,7 @@
 	Prelude> 
 </pre>
 			</p>
+			</div>
 		</div>
 	</div>
 	<div class="pie">

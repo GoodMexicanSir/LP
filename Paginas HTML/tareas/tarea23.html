@@ -6,29 +6,30 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea22.html" title="Anterior">22 «</a>
-			<bold class="actual">23</bold>
-			<a href="tarea24.html" title="Siguiente">» 24</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 23</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea22.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea24.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 23</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
 				Elabore un programa que calcule la suma de dos matrices que
 				ingrese el ususario:<br>
 				[A] + [B] = [C]
 			</p>
-		</div>
+		<div class="espacio"></div>
 		<h3>JAVA</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 /*	
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -52,13 +53,15 @@ public class tarea23{
 
 		for(i=0; i< c; i++){
 			for(j=0; j< f; j++){
-				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de matrizA["+i+"]["+j+"]");
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de 
+				matrizA["+i+"]["+j+"]");
 				matrizA[i][j] = Integer.parseInt(entrada);
 			}
 		}
 		for(i=0; i< c; i++){
 			for(j=0; j< f; j++){
-				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de matrizB["+i+"]["+j+"]");
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de 
+				matrizB["+i+"]["+j+"]");
 				matrizB[i][j] = Integer.parseInt(entrada);
 			}
 		}
@@ -76,10 +79,9 @@ public class tarea23{
 	} //Fin de función main
 } //Fin de clase tarea23
 </pre>
-		</div>
+		<div class="espacio"></div>
 		<h3>RUBY</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 =begin
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -126,6 +128,7 @@ end
 
 print("\n[A] + [B] = [C]\n\n#{salidaC}")
 </pre>
+		</div>
 		</div>
 	</div>
 	<div class="pie">

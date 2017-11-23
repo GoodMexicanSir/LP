@@ -6,20 +6,22 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea21.html" title="Anterior">21 «</a>
-			<bold class="actual">22</bold>
-			<a href="tarea23.html" title="Siguiente">» 23</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 22</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea21.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea23.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 22</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
 				<h3>Arreglo bidimensional</h3>
 				Construya un programa que al recibir como datos un arreglo bidimensional de MxN
@@ -29,18 +31,16 @@
 				Ejemplo:<br>
 				Elemento a buscar: 8<br>
 				El 8 aparece 3 veces<br>
-				<pre>
+				<pre class="consola">
 					1   21   89   -2
 					8    7   34    5
 					6   -5    0    2
 					21  11    8    8
 				</pre>
 			</p>
-		</div>
-		</div>
+			<div class="espacio"></div>
 		<h3>JAVA</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 /*	
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -62,7 +62,8 @@ public class tarea22{
 
 		for(i=0; i< c; i++){
 			for(j=0; j< f; j++){
-				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de matriz["+i+"]["+j+"]");
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de 
+				matriz["+i+"]["+j+"]");
 				matriz[i][j] = Integer.parseInt(entrada);
 			}
 		}
@@ -79,14 +80,14 @@ public class tarea22{
 			salida = salida + ("\n");
 		}
 
-		JOptionPane.showMessageDialog(null,"Matriz["+c+"]["+f+"]\n"+salida+"\nElemento a buscar: "+b+"\nEl "+b+" aparece "+suma+" veces");
+		JOptionPane.showMessageDialog(null,"Matriz["+c+"]["+f+"]\n"+salida+"\n
+		Elemento a buscar: "+b+"\nEl "+b+" aparece "+suma+" veces");
 	} //Fin de función main
 } //Fin de clase tarea22
 </pre>
-		</div>
+		<div class="espacio"></div>
 		<h3>RUBY</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 =begin
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -125,8 +126,9 @@ for i in (0...f)
    salida = salida + "\n"
 end
 
-print("\nMatriz[#{f}][#{c}] \n#{salida}\nElemento a buscar: #{b}\nEl #{b} aparece #{suma} veces\n")
+print("\nMatriz[#{f}][#{c}] \n#{salida}\nElemento a buscar:#{b}\nEl#{b} aparece #{suma} veces\n")
 </pre>
+		</div>
 		</div>
 	</div>
 	<div class="pie">

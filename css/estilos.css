@@ -17,10 +17,11 @@
     margin: 0 auto;
     position: fixed;
     z-index: 1;
+    font-family: Agency FB;
 }
 .navegacion{
 	width: 100%;
-	background-color: rgb(254, 196, 9); /*color barra*/
+	background-color: rgb(000, 210, 232); /*color barra*/
 	line-height: 50px;
     margin: 0 auto;
     max-height: 50px;
@@ -38,6 +39,7 @@
     text-align: center;
     padding: 0 21px 0;
     list-style: none;
+    font-size: 27px;
 }
 .perso{
 	display: block;
@@ -46,6 +48,11 @@
     padding: 21px;
     text-transform: uppercase;
 	text-decoration: none;
+	background-color: rgba(242, 36, 94, 0.5);
+	font-family: Agency FB;
+	font-size: 27px;
+	color:rgb(40,40,40);
+	border: 1px solid;
 }
 .perso:hover{
     background-color: rgba(23, 191, 195, 0.5); /*Sombreado botones*/
@@ -54,7 +61,7 @@
     float: left;
 }
 .links li:hover{
-    background-color: rgba(23, 191, 195, 0.5); /*Sombreado botones*/
+    background-color: rgba(166, 0, 94, 0.3); /*Sombreado botones*/
 }
 .links li a{
 	color: black;
@@ -111,9 +118,10 @@ h4{
     width: 100%;
     margin: 66px 0 0 0;
     border-bottom: solid 1px #E1E1E1;
-    padding: 0;
+    padding-top: 3px;
     box-sizing: border-box;
     background-color: rgb(242,36,94);
+    font-family: Agency FB;
 }
 .M{
     width: 50%;
@@ -136,4 +144,15 @@ h4{
     border-top: 1px solid #E1E1E1; /*linea divisoria*/
     padding-top: 30px;
     margin: 0 21px;
+}
+.consola{
+	font-size: 15px;
+	border: 1px solid;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: black;
+	color: white;
+}
+h3{
+	color:rgb(0,85,100);
 }

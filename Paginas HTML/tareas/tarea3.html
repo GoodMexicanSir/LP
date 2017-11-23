@@ -6,22 +6,24 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea2.html" title="Anterior">2 «</a>
-			<bold class="actual">3</bold>
-			<a href="tarea4.html" title="Siguiente">» 4</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 3</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea2.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea4.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 3</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
-				<h1>Prolog</h1>
+				<h1>Prolog</h1><hr>
 				<h3>Símbolos, sintáxis, esqueleto de los programas</h3>
 
 				Símbolos:
@@ -50,7 +52,7 @@
 				Una lista es una secuencia ordenada de elementos que puede tener cualquier longitud. La forma sintáctica para describir una lista con cabeza X y resto Y es la notación [X|Y].<br><br>
 
 				Esqueleto:<br>
-<pre>
+<pre class="consola">
 	$ swipl
 	Welcome to SWI-Prolog ...
 	...
@@ -59,7 +61,7 @@
 </pre>
 				Se puede abrir un programa previamente creado para su consulta
 				de dos formas:
-<pre>
+<pre class="consola">
 	?- [likes].
 	true.
 
@@ -72,7 +74,7 @@
 	1 ?-
 </pre>
 Añadir reglas
-<pre>
+<pre class="consola">
 	?- [user].
 	|: hello :- format('Hello world~n').
 	|: ^D
@@ -88,7 +90,7 @@ Añadir reglas
 				<h3>Tipo de paradigma al que pertenece</h3>
 				Paradigma lógico
 				<h3>Ejemplo de programa</h3>
-<pre>
+<pre class="consola">
 	/* ancestor(A, B) significa que A es ancestro de B. */
 	ancestor(bob, susan).
 	ancestor(A, X) :- parent(A, X).
@@ -108,6 +110,7 @@ Ejecutamos el programa y podemos realizar preguntas como:
 	X = fred .
 </pre>
 			</p>
+			</div>
 		</div>
 	</div>
 	<div class="pie">

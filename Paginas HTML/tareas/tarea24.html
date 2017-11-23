@@ -6,27 +6,29 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea23.html" title="Anterior">23 «</a>
-			<bold class="actual">24 »</bold>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 24</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea22.html" title="Anterior">«</a></li>
+					<li><bold class="links">»</bold></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 24</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
 				Elaborar un programa que calcule la multiplicación de dos matrices
 				que ingrese el usuario.
 			</p>
-		</div>
+		<div class="espacio"></div>
 		<h3>JAVA</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 /*	
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -48,7 +50,8 @@ public class tarea24{
 
 		for(i=0; i< fA; i++){
 			for(j=0; j< cA; j++){
-				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de A["+i+"]["+j+"]");
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de
+				 A["+i+"]["+j+"]");
 				matrizA[i][j] = Integer.parseInt(entrada);
 			}
 		}
@@ -61,7 +64,8 @@ public class tarea24{
 
 		for(i=0; i< fB; i++){
 			for(j=0; j< cB; j++){
-				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de B["+i+"]["+j+"]");
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de
+				 B["+i+"]["+j+"]");
 				matrizB[i][j] = Integer.parseInt(entrada);
 			}
 		}
@@ -104,10 +108,9 @@ public class tarea24{
 	} //Fin de función main
 } //Fin de clase tarea24
 </pre>
-		</div>
+		<div class="espacio"></div>
 		<h3>RUBY</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 =begin
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -180,6 +183,7 @@ end
 
 print("\n[A] * [B] = [C]\n\n#{salidaC}")
 </pre>
+		</div>
 		</div>
 	</div>
 	<div class="pie">

@@ -6,20 +6,22 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea15.html" title="Anterior">15 «</a>
-			<bold class="actual">16</bold>
-			<a href="tarea17.html" title="Siguiente">» 17</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 16</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea15.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea17.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 16</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
 				<h3>Problema PS3.10</h3>
 				Una empresa dedicada a la venta de localidades por teléfono e Internet maneja seis tipos de localidades para un circo ubicado en la zona sur de la Ciudad de México. Algunas de las zonas del circo tienen el mismo precio, pero se manejan diferente para administrar eficientemente la asignación de los asientos. Los precios de cada localidad y los datos referentes a la venta de boletos para la próxima función se manejan de la siguiente forma:<br>
@@ -29,10 +31,9 @@
 				  0 ,       0<br>
 				Donde: L1, L2, L3, L4, L5 y L6 son variables de tipo real que representan los precios de las diferentes localidades. CLAi y CANi son variables de tipo entero que representan el tipo de localidad y la cantidad de boletos, respectivamente, de la venta i
 			</p>
-		</div>
+		<div class="espacio"></div>
 		<h3>JAVA</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 /*	
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -42,70 +43,73 @@
 import javax.swing.JOptionPane;
 public class tarea16{
 	public static void main (String[] args){
-		String entrada;
-		String[] options={"L1","L2","L3","L4","L5","L6","Cancelar"};
-		int can=0, ven=0, op=0, l1=300, l2=450, l3=550, l4=670, l5=800, l6=1200,
-					 			canT1=0, canT2=0, canT3=0, canT4=0, canT5=0, canT6=0;	
+	String entrada;
+	String[] options={"L1","L2","L3","L4","L5","L6","Cancelar"};
+	int can=0, ven=0, op=0, l1=300, l2=450, l3=550, l4=670, l5=800, l6=1200,
+		canT1=0, canT2=0, canT3=0, canT4=0, canT5=0, canT6=0;	
 
-		do{
-			int cla = JOptionPane.showOptionDialog(null,"Selecciona el tipo de localidad deseado:\n L1 = $300\n L2 = $450\n L3 = $550\n L4 = $670\n L5 = $800\n L6 = $1200","Localidades",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[0]);
+	do{
+	int cla = JOptionPane.showOptionDialog(null,"Selecciona el tipo de localidad deseado:
+	\n L1 = $300\n L2 = $450\n L3 = $550\n L4 = $670\n L5 = $800\n L6 = $1200","Localidades"
+	,JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[0]);
 
-			switch(cla){
-				case 0:
-					entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
-					can = Integer.parseInt(entrada);
-					ven = can*l1;
-					canT1 = canT1 + can;
-					break;
-				case 1:
-					entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
-					can = Integer.parseInt(entrada);
-					ven = can*l2;
-					canT2 = canT2 + can;
-					break;
-				case 2:
-					entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
-					can = Integer.parseInt(entrada);
-					ven = can*l3;
-					canT3 = canT3 + can;
-					break;
-				case 3:
-					entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
-					can = Integer.parseInt(entrada);
-					ven = can*l4;
-					canT4 = canT4 + can;
-					break;
-				case 4:
-					entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
-					can = Integer.parseInt(entrada);
-					ven = can*l5;
-					canT5 = canT5 + can;
-					break;
-				case 5:
-					entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
-					can = Integer.parseInt(entrada);
-					ven = can*l6;
-					canT6= canT6 + can;
-					break;
-				case 6:
-					System.exit(0);
-					break;
-				default:
-				break;
-			}
-			JOptionPane.showMessageDialog(null,"Total de la compra:\n$"+ven);
-			op = JOptionPane.showConfirmDialog(null,"Desea comprar otra localidad?","Opcion", JOptionPane.YES_NO_OPTION);
-		}while(op == 0);
-		op = canT1*l1 + canT2*l2 + canT3*l3 + canT4*l4 + canT5*l5 + canT6*l6;
-		JOptionPane.showMessageDialog(null,"Total de boletos vendidos:\nL1 = "+canT1+"\nL2 = "+canT2+"\nL3 = "+canT3+"\nL4 = "+canT4+"\nL5 = "+canT5+"\nL6 = "+canT6);
+	switch(cla){
+	case 0:
+	entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
+	can = Integer.parseInt(entrada);
+	ven = can*l1;
+	canT1 = canT1 + can;
+	break;
+	case 1:
+	entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
+	can = Integer.parseInt(entrada);
+	ven = can*l2;
+	canT2 = canT2 + can;
+	break;
+	case 2:
+	entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
+	can = Integer.parseInt(entrada);
+	ven = can*l3;
+	canT3 = canT3 + can;
+	break;
+	case 3:
+	entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");		
+	can = Integer.parseInt(entrada);
+	ven = can*l4;
+	canT4 = canT4 + can;
+	break;
+	case 4:
+	entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
+	can = Integer.parseInt(entrada);
+	ven = can*l5;
+	canT5 = canT5 + can;
+	break;
+	case 5:
+	entrada = JOptionPane.showInputDialog("Ingrese la cantidad de boletos deseados: ");
+	can = Integer.parseInt(entrada);
+	ven = can*l6;
+	canT6= canT6 + can;
+	break;
+	case 6:
+	System.exit(0);
+	break;
+	default:
+	break;
+	}
+	JOptionPane.showMessageDialog(null,"Total de la compra:\n$"+ven);
+			op = JOptionPane.showConfirmDialog(null,"Desea comprar otra localidad?"
+			,"Opcion", JOptionPane.YES_NO_OPTION);
+	}while(op == 0);
+	op = canT1*l1 + canT2*l2 + canT3*l3 + canT4*l4 + canT5*l5 + canT6*l6;
+	JOptionPane.showMessageDialog(null,"Total de boletos vendidos:\nL1 = "+canT1+"\nL2 = 
+	"+canT2+"\nL3 = "+canT3+"\nL4 = "+canT4+"\nL5 = "+canT5+"\nL6 = "+canT6);
 		JOptionPane.showMessageDialog(null,"Recaudacion total = $"+op);
-	} //Fin de función main
+} //Fin de función main
 } //Fin de clase tarea16
 </pre>
-		</div>
+		<div class="espacio"></div>
 		<h3>RUBY</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 =begin
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -128,7 +132,8 @@ t6 = 0
 begin
 	puts("\nSelecciona el tipo de localidad deseado:")
 	puts("========================================")
-	print(" 1.- L1 = $300\n 2.- L2 = $450\n 3.- L3 = $550\n 4.- L4 = $670\n 5.- L5 = $800\n 6.- L6 = $1200\n -->")
+	print(" 1.- L1 = $300\n 2.- L2 = $450\n 3.- L3 = $550\n 4.- L4 = $670\n 
+	5.- L5 = $800\n 6.- L6 = $1200\n -->")
 	n = gets().to_i
 
 	case n
@@ -180,6 +185,7 @@ print(" L1 = #{t1}\n L2 = #{t2}\n L3 = #{t3}\n L4 = #{t4}\n L5 = #{t5}\n L6 = #{
 puts("==========================")
 puts("Recaudacion total = $#{n}")
 </pre>
+		</div>
 		</div>
 	</div>
 	<div class="pie">

@@ -6,20 +6,22 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea20.html" title="Anterior">20 «</a>
-			<bold class="actual">21</bold>
-			<a href="tarea22.html" title="Siguiente">» 22</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 21</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea20.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea22.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 21</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
 				<h3>Problema PS5.7</h3>
 				En un arreglo unidimensional de tipo real se tienen almacenadas las toneladas mensuales de cereales cosechadas durante el año anterior en una estancia de la pampa Argentina. Escribe un programa que calcule e imprima lo siguiente:
@@ -30,10 +32,9 @@
 				</ol>
 				Dato: COS[12] (arreglo unidimensional de tipo real de 12 elementos).
 			</p>
-		</div>
+		<div class="espacio"></div>
 		<h3>JAVA</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 /*	
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -48,11 +49,14 @@ public class tarea21{
 		int[] vector = new int[12];
 
 		String[] meses = new String[12];
-		meses[0]="Enero"; meses[1]="Febrero"; meses[2]="Marzo"; meses[3]="Abril"; meses[4]="Mayo"; meses[5]="Junio";
-		meses[6]="Julio"; meses[7]="Agosto"; meses[8]="Septiembre"; meses[9]="Octubre"; meses[10]="Noviembre"; meses[11]="Diciembre";
+		meses[0]="Enero"; meses[1]="Febrero"; meses[2]="Marzo"; meses[3]="Abril";
+		meses[4]="Mayo"; meses[5]="Junio"; meses[6]="Julio"; meses[7]="Agosto";
+		meses[8]="Septiembre"; meses[9]="Octubre"; meses[10]="Noviembre";
+		meses[11]="Diciembre";
 
 		for(i=0; i< 12; i++){
-			entrada = JOptionPane.showInputDialog(null,"Ingrese las toneladas de cereales producidas en:\n"+meses[i]);
+			entrada = JOptionPane.showInputDialog(null,"Ingrese las toneladas 
+			de cereales producidas en:\n"+meses[i]);
 			vector[i] = Integer.parseInt(entrada);
 			p = p + vector[i];
 		}
@@ -67,14 +71,15 @@ public class tarea21{
 			}
 		}
 
-		JOptionPane.showMessageDialog(null,"Promedio anual de toneladas cosechadas: "+pro+"\n"+mes+" meses tuvieron una cosecha superior al promedio\nMes de mayor produccion "+meses[num]+" con "+vector[num]+" toneladas");
+		JOptionPane.showMessageDialog(null,"Promedio anual de toneladas cosechadas:
+		 "+pro+"\n"+mes+" meses tuvieron una cosecha superior al promedio\nMes de 
+		 mayor produccion "+meses[num]+" con "+vector[num]+" toneladas");
 	} //Fin de función main
 } //Fin de clase tarea21
 </pre>
-		</div>
+		<div class="espacio"></div>
 		<h3>RUBY</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 =begin
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -128,6 +133,7 @@ puts("Promedio anual de toneladas cosechadas: #{pro}")
 puts("#{con} meses tuvieron una cosecha superior al promedio")
 puts("Mes de mayor produccion #{meses[m]} con #{ton[m]} toneladas")
 </pre>
+		</div>
 		</div>	
 	</div>
 	<div class="pie">

@@ -6,22 +6,24 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea3.html" title="Anterior">3 «</a>
-			<bold class="actual">4</bold>
-			<a href="tarea5.html" title="Siguiente">» 5</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 4</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea3.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea5.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 4</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
-				<h1>Python</h1>
+				<h1>Python</h1><hr>
 				<h3>Símbolos, sintáxis, esqueleto de los programas</h3>
 
 				Símbolos:
@@ -35,7 +37,7 @@
 							<li>% modulo</li>
 							<li>** exponente</li>
 							<li>// división de operandos donde el resultado remueve los digitos despues del punto decimal, si el resultado es negativo se redondea alejandose del cero.</li>
-						</ul>
+						</ul><br>
 					<li>Operadores de comparación:</li>
 						<ul>
 							<lI>== si los operandos son iguales es verdadero</lI>
@@ -47,7 +49,7 @@
 							es verdadero</li>
 							<li><= si el valor del operando izquierdo es mayor o igual
 							es verdadero</li>
-						</ul>
+						</ul><br>
 					<li>Operadores de asignación:</li>
 						<ul>
 							<li>= asigna un valor</li>
@@ -58,7 +60,7 @@
 							<li>%= Modulus AND</li>
 							<li>**= Exponent AND</li>
 							<li>//= Floor Division AND</li>
-						</ul>
+						</ul><br>
 					<li>Operadores Bitwise:</li>
 						<ul>
 							<li>& Binary AND</li>
@@ -67,7 +69,7 @@
 							<li>~ Binary Ones Complement</li>
 							<li><< Binary Left Shift</li>
 							<li>>> Binary Right Shift</li>
-						</ul>
+						</ul><br>
 					<lI>Operadores de membresia:</lI>
 						<ul>
 							<li>in es verdadera si encuentra una variable en la secuencia especificada y falso si no es asi</li>
@@ -80,7 +82,7 @@
 					<li>Comentarios: detrás de # </li>
 					<li>
 						Definición de funciones:
-<pre>
+<pre class="consola">
 	>>>def nombrefunción(arg1,arg2..):
 	... 	instrucción1
 	... 	instrucción2
@@ -90,7 +92,7 @@
 					</li>
 					<li>
 						If: 
-<pre>
+<pre class="consola">
 	>>>if condicion:
 	...		instrucciones
 	...     elif condicion:
@@ -101,7 +103,7 @@
 					</li>
 					<li>
 						For:
-<pre>
+<pre class="consola">
 	>>>for variable in variable_lista:
 	...		instrucciones
 </pre>
@@ -112,7 +114,7 @@
 				</ul>
 				Esqueleto:<br><br>
 				Python es un lenguaje libre, solo se declaran las variables e instrucciones a ejecutar.
-<pre>
+<pre class="consola">
 	$ python
 	Python 2.6.6 (r266:84292, Sep 15 2010, 16:22:56)
 	[GCC 4.4.5] on linux2
@@ -126,7 +128,7 @@
 				<h3>Tipo de paradigma al que pertenece</h3>
 				Programación orientada a objetos
 				<h3>Ejemplo de programa</h3>
-<pre>
+<pre class="consola">
 	###Programa que imprima los 25 primeros numeros naturales
 	n = 1
 	while n <= 25: 
@@ -134,6 +136,7 @@
     	n += 1
 </pre>
 			</p>
+			</div>
 		</div>
 	</div>
 	<div class="pie">

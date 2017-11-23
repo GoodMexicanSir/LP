@@ -6,29 +6,30 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea17.html" title="Anterior">17 «</a>
-			<bold class="actual">18</bold>
-			<a href="tarea19.html" title="Siguiente">» 19</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 18</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea17.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea19.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 18</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
 				<h3>Problema PS5.1</h3>
 				Escribe un programa que, al dar como dato un arreglo unidimensional de números enteros, determine cuántos de ellos son positivos, cuántos negativos y cuántos nulos. <br>
 				Dato: VEC[N] (arreglo unidimensional de tipo entero de N elementos, 1 ≤ N ≤ 100).
 			</p>
-		</div>
+		<div class="espacio"></div>
 		<h3>JAVA</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 /*	
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -47,7 +48,7 @@ public class tarea18{
 		int[] vector = new int[n];
 
 		for(i=0; i< n; i++){
-			entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de vector["+i+"]:");
+		entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de vector["+i+"]:");
 			vector[i] = Integer.parseInt(entrada);
 		}
 
@@ -61,14 +62,14 @@ public class tarea18{
 			resultado = resultado + vector[i] + " . ";
 		}
 
-		JOptionPane.showMessageDialog(null,"["+resultado+"]\nValores positivos: "+pos+"\nValores negativos: "+neg+"\nValores nulos: "+nul);
+		JOptionPane.showMessageDialog(null,"["+resultado+"]\nValores positivos: 
+		"+pos+"\nValores negativos: "+neg+"\nValores nulos: "+nul);
 	} //Fin de función main
 } //Fin de clase tarea18
 </pre>
-		</div>
+		<div class="espacio"></div>
 		<h3>RUBY</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 =begin
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -103,6 +104,7 @@ puts("Valores positivos: #{pos}")
 puts("Valores negativos: #{neg}")
 puts("Valores nulos: #{nul}")
 </pre>
+		</div>
 		</div>	
 	</div>
 	<div class="pie">

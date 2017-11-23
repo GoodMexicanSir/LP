@@ -6,22 +6,24 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea4.html" title="Anterior">4 «</a>
-			<bold class="actual">5</bold>
-			<a href="tarea6.html" title="Siguiente">» 6</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 5</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea4.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea6.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 5</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
-				<h1>Scheme </h1>
+				<h1>Scheme </h1><hr>
 				<h3>Símbolos, sintáxis, esqueleto de los programas</h3>
 
 				Símbolos:<br><br>
@@ -99,9 +101,9 @@
 				Paradigma funcional
 				<h3>Ejemplo de programa</h3>
 				Programa que imprime un triángulo:
-<pre>
-	(define (T) ;lo que hacemos con esta función es la figura con la que se ;llenara el triángulo
-	(display "*"))
+<pre class="consola">
+	(define (T) ;lo que hacemos con esta función es la figura con la que se 
+	(display "*"));llenara el triángulo
 
 	(define (dibuje cant) ;esta funcion me dibuja los "*" pasando un espacio :entre ellos
    	(do ((i 0 (+ i 1)))
@@ -109,13 +111,14 @@
     	(t)
     	(display " ")))
 
-	(define (triangulo) ;y esta es la que me dibuja el triangulo aquí defino ;que el tamaño sea de 10 *'s
-   	(do ((i 1 (+ i 1)));observa como se hace el ciclo :D
+	(define (triangulo) ;y esta es la que me dibuja el triangulo aquí defino 
+   	(do ((i 1 (+ i 1)));que el tamaño sea de 10 *'s
     	((= i 10) )
     	(dibuje i);llamada a la funcion
     	(newline)));pasa renglon
 </pre>
 			</p>
+			</div>
 		</div>
 	</div>
 	<div class="pie">

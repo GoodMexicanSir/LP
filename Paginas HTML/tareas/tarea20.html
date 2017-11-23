@@ -6,20 +6,22 @@
 	<link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
-		<tr>
-		<div id="cambiar">
-			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
-			<a href="tarea19.html" title="Anterior">19 «</a>
-			<bold class="actual">20</bold>
-			<a href="tarea21.html" title="Siguiente">» 21</a>
-	</div>
 	<div class="pagina">
-		<div class="caja">
-			<a class="Letrero">Tarea 20</a>
+		<div class="cabecera">
+			<div class="navegacion">
+				<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png" class="logo"></a>
+				<ul class="links">
+					<li><a class="links" href="../tareas.html" title="Menú de Tareas">Menú</a></li>
+					<li><a class="links" href="tarea19.html" title="Anterior">«</a></li>
+					<li><a class="links" href="tarea21.html" title="Siguiente">»</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="caja">
+		<div class="banner">
+			<h4>Tarea 20</h4>
+		</div>
+		<div class="caja N">
+			<div class="cajaP">
 			<p class="texto">
 				<h3>Problema PS5.6</h3>
 				En un arreglo unidimensional de tipo real se almacenan las calificaciones de un grupo de N alumnos que presentaron un examen de admisión a una universidad. Escribe un programa que calcule e imprima lo siguiente:<br>
@@ -29,10 +31,9 @@
 				</ol>
 				Dato: ALU[N] (arreglo unidimensional de tipo real de N elementos, 1 ≤ N ≤ 100). 
 			</p>
-		</div>
+		<div class="espacio"></div>
 		<h3>JAVA</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 /*	
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -51,7 +52,8 @@ public class tarea20{
 		int[] vector = new int[n];
 
 		for(i=0; i< n; i++){
-			entrada = JOptionPane.showInputDialog(null,"Calificacion aprobatoria >= 1300\n\nIngrese la calificacion del alumno: "+(i+1));
+			entrada = JOptionPane.showInputDialog(null,"Calificacion aprobatoria
+			 >= 1300\n\nIngrese la calificacion del alumno: "+(i+1));
 			vector[i] = Integer.parseInt(entrada);
 		}
 
@@ -65,14 +67,15 @@ public class tarea20{
 		prom = sum/n;
 		por = (c*100)/n;
 
-		JOptionPane.showMessageDialog(null,"Promedio general del grupo: "+prom+"\nPorcentaje de alumnos aprobados: "+por+"%\nNumero de alumnos cuya calificacion es mayor o igual a 1500: "+m);
+		JOptionPane.showMessageDialog(null,"Promedio general del grupo: "+prom+"
+		\nPorcentajede alumnos aprobados: "+por+"%\nNumero de alumnos cuya 
+		calificacion es mayor o igual a 1500: "+m);
 	} //Fin de función main
 } //Fin de clase tarea20
 </pre>
-		</div>
+		<div class="espacio"></div>
 		<h3>RUBY</h3><hr>
-		<div class="caja">
-<pre>
+<pre class="consola">
 =begin
 	Nombre: Leslie Estefanía Pérez Cerda
 	Matrícula: 1737535
@@ -113,6 +116,7 @@ puts("Promedio general del grupo: #{prom}")
 puts("Porcentaje de alumnos aprobados: #{por}%")
 puts("Numero de alumnos cuya calificacion es mayor o igual a 1500: #{m}")
 </pre>
+		</div>
 		</div>
 	</div>
 	<div class="pie">
