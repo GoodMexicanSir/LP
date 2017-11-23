@@ -4,8 +4,6 @@
 	Hora: Jueves V4-V6
 =end
 
-salidaA = ""
-salidaB = ""
 salidaC = ""
 
 print("\nIngrese el numero de filas --> ")
@@ -39,13 +37,9 @@ for i in (0...f)
    for j in (0...c)
       matrizC[i][j] = matrizA[i][j] + matrizB[i][j]
 
-      salidaA = salidaA + matrizA[i][j].to_s + " "
-      salidaB = salidaB + matrizB[i][j].to_s + " "
       salidaC = salidaC + matrizC[i][j].to_s + " "
    end
-   salidaA = salidaA + "\n"
-   salidaB = salidaB + "\n"
    salidaC = salidaC + "\n"
 end
 
-print("\nA + B = C\n\n#{salidaA}\n+\n#{salidaB}\n=\n#{salidaC}")
+print("\n[A] + [B] = [C]\n\n#{salidaC}")
