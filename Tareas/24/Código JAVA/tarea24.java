@@ -5,7 +5,7 @@
 */
 
 import javax.swing.JOptionPane;
-public class tarea23{
+public class tarea24{
 	public static void main (String[] args){
 		String entrada ="";
 		String salidaA = "";
@@ -49,4 +49,4 @@ public class tarea23{
 
 		JOptionPane.showMessageDialog(null,"[A]\n"+salidaA+"+\n[B]\n"+salidaB+"\n=\n[C]\n"+salidaC);
 	} //Fin de función main
-} //Fin de clase tarea23
+} //Fin de clase tarea24
