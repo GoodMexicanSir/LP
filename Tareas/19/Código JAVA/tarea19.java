@@ -8,10 +8,10 @@ import javax.swing.JOptionPane;
 public class tarea19{
 	public static void main (String[] args){
 		int fibo=1, i,a=1,b=0;
-		int[] vector = new int[99];
+		int[] vector = new int[100];
 		String serie = " . ";
 
-		for(i=1; i<99; i++){
+		for(i=1; i<100; i++){
 			fibo = a + b;
 			a = b;
 			b = fibo;
@@ -19,7 +19,7 @@ public class tarea19{
 			vector[i] = fibo;
 		}
 
-		for(i=1; i<99; i++){
+		for(i=1; i<100; i++){
 			serie = serie + vector[i] + " . ";
 		}
 		JOptionPane.showMessageDialog(null,"["+serie+"]");
