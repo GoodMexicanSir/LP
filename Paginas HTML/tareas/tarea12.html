@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,9 +21,103 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				Construir un programa que calcule e imprima la siguiente serie para los N 
+				primeros términos:<br>
+				-1, 2, 2, -3, 4, 4, 4, 4, -5, 6, 6, 6, 6, -7, ...
 			</p>
 		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea12{
+	public static void main (String[] args){
+		String entrada;
+		String serie = "";
+		int n,i,y=1,x=0,z=1,a=2;
+
+		entrada = JOptionPane.showInputDialog("Ingrese el numero de terminos: ");
+		n = Integer.parseInt(entrada);
+
+		if(n>0){
+			serie = serie + "-1";
+
+			for(i=1; i< n; i++){
+				serie = serie + ", ";
+				if(z==0){
+					serie = serie + (a*-1);
+					z = 1;
+					x = 0;
+					a++;
+				}else if(z==1){
+					serie = serie + a;
+					if(x< y){
+						x++;
+					}else{
+						z = 0;
+						a++;
+						y++;
+					}
+				}
+			}
+		}
+		JOptionPane.showMessageDialog(null,serie);
+	} //Fin de función main
+} //Fin de clase tarea12
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+print("Ingrese el numero de terminos: ")
+n = gets().to_i
+
+serie = ""
+y = 1
+x = 0
+z = 1
+a = 2
+
+if(n>0)then
+	serie = serie + "-1";
+
+	for i in(1...n)
+		serie = serie + ", "
+		if (z == 0)then
+			serie = serie + (a*-1).to_s
+
+			z = 1
+			x = 0
+			a = a + 1
+		elsif(z == 1)then
+			serie = serie + a.to_s
+
+			if (x< y)then
+				x = x + 1
+			else
+				z = 0
+				a = a + 1
+				y = y + 1
+			end
+		end
+	end
+end
+
+print(serie)
+</pre>
+		</div>	
 	</div>
 	<div class="pie">
 		<p>&copy; 2017 || 1737535 

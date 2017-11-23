@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,8 +21,67 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				<h3>Problema PS3.2</h3>
+				Escribe un diagrama de flujo y el correspondiente programa en C que, al recibir como dato un número entero N, calcule el resultado de la siguiente serie:<br>
+				1 + 1/2 + 1/3 + 1/4 + ... + 1/N
 			</p>
+		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea14{
+	public static void main (String[] args){
+		int i, n;
+		double a;
+		String entrada;
+		String serie = "";
+
+		entrada = JOptionPane.showInputDialog("Ingrese el numero de terminos: ");
+		n = Integer.parseInt(entrada);
+
+		for(i=1; i< n; i++){
+			a = 1.0/i;
+			serie = serie + a + ", ";
+		}
+		a = 1.0/n;
+		serie = serie + a + ".";
+		JOptionPane.showMessageDialog(null,serie);
+	} //Fin de función main
+} //Fin de clase tarea14
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+print("Ingrese el numero de terminos: ")
+n = gets().to_i
+
+serie = ""
+i = 1
+for i in(1...n)
+	a = 1.0/i
+
+	serie = serie + a.to_s + ", "
+end
+
+a = 1.0/n
+serie = serie + a.to_s + "."
+
+print(serie)
+</pre>
 		</div>
 	</div>
 	<div class="pie">

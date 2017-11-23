@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,9 +21,114 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				<h3>Problema PS5.7</h3>
+				En un arreglo unidimensional de tipo real se tienen almacenadas las toneladas mensuales de cereales cosechadas durante el año anterior en una estancia de la pampa Argentina. Escribe un programa que calcule e imprima lo siguiente:
+				<ol>
+					<li>El promedio anual de toneladas cosechadas.</li>
+					<li>¿Cuántos meses tuvieron una cosecha superior al promedio anual?</li>
+					<li>¿En qué mes se produjo el mayor número de toneladas? ¿Cuántas fueron?</li>
+				</ol>
+				Dato: COS[12] (arreglo unidimensional de tipo real de 12 elementos).
 			</p>
 		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea21{
+	public static void main (String[] args){
+		String entrada;
+		int i, p=0, pro=0, mes=0, mayor=0, num=0;
+		int[] vector = new int[12];
+
+		String[] meses = new String[12];
+		meses[0]="Enero"; meses[1]="Febrero"; meses[2]="Marzo"; meses[3]="Abril"; meses[4]="Mayo"; meses[5]="Junio";
+		meses[6]="Julio"; meses[7]="Agosto"; meses[8]="Septiembre"; meses[9]="Octubre"; meses[10]="Noviembre"; meses[11]="Diciembre";
+
+		for(i=0; i< 12; i++){
+			entrada = JOptionPane.showInputDialog(null,"Ingrese las toneladas de cereales producidas en:\n"+meses[i]);
+			vector[i] = Integer.parseInt(entrada);
+			p = p + vector[i];
+		}
+		pro = p/12;
+
+		for(i=0; i< 12; i++){
+			if(vector[i]>pro){ mes = mes + 1; }
+
+			if(vector[i]>mayor){
+				mayor = vector[i];
+				num = i;
+			}
+		}
+
+		JOptionPane.showMessageDialog(null,"Promedio anual de toneladas cosechadas: "+pro+"\n"+mes+" meses tuvieron una cosecha superior al promedio\nMes de mayor produccion "+meses[num]+" con "+vector[num]+" toneladas");
+	} //Fin de función main
+} //Fin de clase tarea21
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+pe = 0
+pro = 0
+con = 0
+m = 0
+mayor = 0
+
+meses = Array.new(12)
+
+meses[0]="Enero"
+meses[1]="Febrero"
+meses[2]="Marzo"
+meses[3]="Abril"
+meses[4]="Mayo"
+meses[5]="Junio"
+meses[6]="Julio"
+meses[7]="Agosto"
+meses[8]="Septiembre"
+meses[9]="Octubre"
+meses[10]="Noviembre"
+meses[11]="Diciembre"
+
+ton = Array.new(12)
+
+for i in(0...12)
+	print("\nIngrese las toneladas de cereales producidas en:\n#{meses[i]} --> ")
+	ton[i] = gets().to_i
+	pe = pe + ton[i].to_i
+end
+
+pro = pe/12
+
+for i in(0..12)
+	if(ton[i].to_i>pro)then
+		con = con + 1
+	end
+
+	if(ton[i].to_i>mayor)then
+		mayor = ton[i].to_i
+		m = i
+	end
+end
+
+print("\n")
+puts("Promedio anual de toneladas cosechadas: #{pro}")
+puts("#{con} meses tuvieron una cosecha superior al promedio")
+puts("Mes de mayor produccion #{meses[m]} con #{ton[m]} toneladas")
+</pre>
+		</div>	
 	</div>
 	<div class="pie">
 		<p>&copy; 2017 || 1737535 

@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,9 +21,93 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				Elabore un programa que a través de un menú de opciones permita calcular
+				la conversión de escala de temperatura:
+				<ul>
+					<li>De grados Celcius a Farenheit</li>
+					<li>De grados Farenheit a Celcius</li>
+				</ul>
 			</p>
 		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea9{
+	public static void main (String[] args){
+		String entrada;
+		int x;
+		Double a;
+		String[] options={"1","2","Salir"};
+		int v = JOptionPane.showOptionDialog(null,"Convertir\n 1.- De grados Celcius a Farenheit\n 2.- De grados Farenheit a Celcius","Grados",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[0]);
+
+		switch(v){
+			case 0:
+				entrada = JOptionPane.showInputDialog("Ingrese los grados a convertir: ");
+				x = Integer.parseInt(entrada);
+				a = (x*1.8) + 32;
+				JOptionPane.showMessageDialog(null,+x+" grados Celcius equivalen a "+a+" grados Farenheit");
+				break;
+			case 1:
+				entrada = JOptionPane.showInputDialog("Ingrese los grados a convertir: ");
+				x = Integer.parseInt(entrada);
+				a = (x - 32)/1.8;
+				JOptionPane.showMessageDialog(null,+x+" grados Farenheit equivalen a "+a+" grados Celcius");
+				break;
+			default:
+			break;
+		} //Fin de switch
+	} //Fin de función main
+} //Fin de clase tarea9
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+begin
+	puts "\e[H\e[2J"
+	print("\n\t\tMenu principal\n")
+	print("\t\t==============\n")
+	print("\tConvertir de . . .\n")
+	print("\t1.- Grados Celcius a grados Farenheit\n")
+	print("\t2.- Grados Farenheit a grados Celcius\n")
+	print("\t3.- Salir\n")
+	print("\nSelecciona una opción --> ")
+	n=gets().to_i
+
+	case n
+		when 1
+			print("\nIngrese los grados a convertir: ")
+			a = gets().to_f
+			b = (a*1.8) + 32;
+			print("\t#{a} grados Celcius equivalen a #{b} grados Farenheit")
+			print("\n\nPresione cualquier tecla para volver al menu")
+			gets
+		when 2
+			print("\nIngrese los grados a convertir: ")
+			a = gets().to_f
+			b = (a - 32)/1.8;
+			print("\t#{a} grados Farenheit equivalen a #{b} grados Celcius")
+			print("\n\nPresione cualquier tecla para volver al menu")
+			gets
+		else
+			puts "\e[H\e[2J"
+	end
+end while n != 3
+</pre>
+		</div>	
 	</div>
 	<div class="pie">
 		<p>&copy; 2017 || 1737535 

@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,8 +21,111 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				Elabore un programa que calcule la suma de dos matrices que
+				ingrese el ususario:<br>
+				[A] + [B] = [C]
 			</p>
+		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea23{
+	public static void main (String[] args){
+		String entrada ="";
+		String salidaC = "";
+		int i, j, c, f, b;
+
+		entrada = JOptionPane.showInputDialog(null,"Ingrese el numero de filas:");
+		c = Integer.parseInt(entrada);
+		entrada = JOptionPane.showInputDialog(null,"Ingrese el numero de columnas:");
+		f = Integer.parseInt(entrada);
+		int[][] matrizA = new int[c][f];
+		int[][] matrizB = new int[c][f];
+		int[][] matrizC = new int[c][f];
+
+		for(i=0; i< c; i++){
+			for(j=0; j< f; j++){
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de matrizA["+i+"]["+j+"]");
+				matrizA[i][j] = Integer.parseInt(entrada);
+			}
+		}
+		for(i=0; i< c; i++){
+			for(j=0; j< f; j++){
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de matrizB["+i+"]["+j+"]");
+				matrizB[i][j] = Integer.parseInt(entrada);
+			}
+		}
+
+		for(i=0; i< c; i++){
+			for(j=0; j< f; j++){
+				matrizC[i][j] = matrizA[i][j] + matrizB[i][j];
+
+				salidaC = salidaC + matrizC[i][j] + "   ";
+			}
+			salidaC = salidaC + ("\n");
+		}
+
+		JOptionPane.showMessageDialog(null,"[A]+[B] = [C]\n"+salidaC);
+	} //Fin de función main
+} //Fin de clase tarea23
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+salidaC = ""
+
+print("\nIngrese el numero de filas --> ")
+f = gets().to_i
+print("Ingrese el numero de columnas --> ")
+c = gets().to_i
+
+#Declaración de una matriz
+# nombre de la matriz = Array.new(variable de filas){Array.new(variable de columnas)}
+matrizA = Array.new(f){Array.new(c)}
+matrizB = Array.new(f){Array.new(c)}
+matrizC = Array.new(f){Array.new(c)}
+print("\n")
+
+for i in (0...f)
+   for j in (0...c)
+      print("Ingrese el valor de A[#{i}][#{j}]: ")
+	  matrizA[i][j] = gets().to_i
+   end
+end
+
+print("\n")
+for i in (0...f)
+   for j in (0...c)
+      print("Ingrese el valor de B[#{i}][#{j}]: ")
+     matrizB[i][j] = gets().to_i
+   end
+end
+
+for i in (0...f)
+   for j in (0...c)
+      matrizC[i][j] = matrizA[i][j] + matrizB[i][j]
+
+      salidaC = salidaC + matrizC[i][j].to_s + " "
+   end
+   salidaC = salidaC + "\n"
+end
+
+print("\n[A] + [B] = [C]\n\n#{salidaC}")
+</pre>
 		</div>
 	</div>
 	<div class="pie">

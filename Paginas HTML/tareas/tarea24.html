@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -20,8 +20,166 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				Elaborar un programa que calcule la multiplicación de dos matrices
+				que ingrese el usuario.
 			</p>
+		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea24{
+	public static void main (String[] args){
+		String entrada ="";
+		String salidaC = "";
+		int i, j, cA, cB, fA, fB;
+
+		entrada = JOptionPane.showInputDialog(null,"[A]\nIngrese el numero de filas:");
+		fA = Integer.parseInt(entrada);
+		entrada = JOptionPane.showInputDialog(null,"[A]\nIngrese el numero de columnas:");
+		cA = Integer.parseInt(entrada);
+		int[][] matrizA = new int[fA][cA];
+
+		for(i=0; i< fA; i++){
+			for(j=0; j< cA; j++){
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de A["+i+"]["+j+"]");
+				matrizA[i][j] = Integer.parseInt(entrada);
+			}
+		}
+
+		entrada = JOptionPane.showInputDialog(null,"[B]\nIngrese el numero de filas:");
+		fB = Integer.parseInt(entrada);
+		entrada = JOptionPane.showInputDialog(null,"[B]\nIngrese el numero de columnas:");
+		cB = Integer.parseInt(entrada);
+		int[][] matrizB = new int[fB][cB];
+
+		for(i=0; i< fB; i++){
+			for(j=0; j< cB; j++){
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de B["+i+"]["+j+"]");
+				matrizB[i][j] = Integer.parseInt(entrada);
+			}
+		}
+
+		if(cA == fB){
+			int[][] matrizC = new int[fB][cA];
+
+			for(i=0; i< fB; i++){
+				for(j=0; j< cA; j++){
+					matrizC[i][j] += matrizA[i][j] + matrizB[j][i];
+				}
+			}
+
+			for(i=0; i< fB; i++){
+				for(j=0; j< cA; j++){
+					salidaC = salidaC + matrizC[i][j] + "   ";
+				}
+				salidaC = salidaC + ("\n");
+			}
+		}else if(cB == fA){
+			int[][] matrizC = new int[fA][cB];
+
+			for(i=0; i< fA; i++){
+				for(j=0; j< cB; j++){
+					matrizC[i][j] += matrizB[i][j] + matrizA[j][i];
+				}
+			}
+
+			for(i=0; i< fA; i++){
+				for(j=0; j< cB; j++){
+					salidaC = salidaC + matrizC[i][j] + "   ";
+				}
+				salidaC = salidaC + ("\n");
+			}
+		}else{
+			JOptionPane.showMessageDialog(null,"Las matrices no son multiplicables");
+		}
+
+		JOptionPane.showMessageDialog(null,"[A]*[B] = [C]\n"+salidaC);
+	} //Fin de función main
+} //Fin de clase tarea24
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+salidaC = ""
+
+print("\nIngrese el numero de filas de [A] --> ")
+fA = gets().to_i
+print("Ingrese el numero de columnas de [A]--> ")
+cA = gets().to_i
+matrizA = Array.new(fA){Array.new(cA)}
+
+for i in (0...fA)
+   for j in (0...cA)
+      print("Ingrese el valor de A[#{i}][#{j}]: ")
+	  matrizA[i][j] = gets().to_i
+   end
+end
+
+print("\nIngrese el numero de filas de [B] --> ")
+fB = gets().to_i
+print("Ingrese el numero de columnas de [B]--> ")
+cB = gets().to_i
+matrizB = Array.new(fB){Array.new(cB)}
+
+for i in (0...fB)
+   for j in (0...cB)
+      print("Ingrese el valor de B[#{i}][#{j}]: ")
+	  matrizB[i][j] = gets().to_i
+   end
+end
+
+if(cA == fB)
+	matrizC = Array.new(fB){Array.new(cA)}
+
+	for i in(0..fB)
+		for j in(0..cA)
+			matrizC[i][j] = matrizC[i][j] + matrizA[i][j] + matrizB[j][i]
+		end
+	end
+
+	for i in (0...fB)
+   		for j in (0...cA)
+      		salidaC = salidaC + matrizC[i][j].to_s + " "
+   		end
+   		salidaC = salidaC + "\n"
+	end
+
+elsif(cB == fA)
+	matrizC = Array.new(fA){Array.new(cB)}
+
+	for i in(0..fA)
+		for j in(0..cB)
+			matrizC[i][j] = matrizC[i][j] + matrizB[i][j] + matrizA[j][i]
+		end
+	end
+
+	for i in (0...fA)
+   		for j in (0...cB)
+      		salidaC = salidaC + matrizC[i][j].to_s + " "
+   		end
+   		salidaC = salidaC + "\n"
+	end
+
+else
+	print("\nLas matrices no son multiplicables")
+end
+
+print("\n[A] * [B] = [C]\n\n#{salidaC}")
+</pre>
 		</div>
 	</div>
 	<div class="pie">

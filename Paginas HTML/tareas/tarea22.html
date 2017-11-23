@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,8 +21,112 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				<h3>Arreglo bidimensional</h3>
+				Construya un programa que al recibir como datos un arreglo bidimensional de MxN
+				elementos de tipo entero y un número entero, determine cuantas veces se encuentra 
+				este número dentro del arreglo.<br>
+				Además de imprimir la matríz al final<br><br>
+				Ejemplo:<br>
+				Elemento a buscar: 8<br>
+				El 8 aparece 3 veces<br>
+				<pre>
+					1   21   89   -2
+					8    7   34    5
+					6   -5    0    2
+					21  11    8    8
+				</pre>
 			</p>
+		</div>
+		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea22{
+	public static void main (String[] args){
+		String entrada ="";
+		String salida = "";
+		int i, j, c, f, b, suma=0;
+
+		entrada = JOptionPane.showInputDialog(null,"Ingrese el numero de filas:");
+		c = Integer.parseInt(entrada);
+		entrada = JOptionPane.showInputDialog(null,"Ingrese el numero de columnas:");
+		f = Integer.parseInt(entrada);
+		int[][] matriz = new int[c][f];
+
+		for(i=0; i< c; i++){
+			for(j=0; j< f; j++){
+				entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de matriz["+i+"]["+j+"]");
+				matriz[i][j] = Integer.parseInt(entrada);
+			}
+		}
+
+		entrada = JOptionPane.showInputDialog(null,"Ingrese el valor a buscar:");
+		b = Integer.parseInt(entrada);
+
+		for(i=0; i< c; i++){
+			for(j=0; j< f; j++){
+				if(matriz[i][j]==b){suma = suma + 1;}
+
+				salida = salida + matriz[i][j] + "   ";
+			}
+			salida = salida + ("\n");
+		}
+
+		JOptionPane.showMessageDialog(null,"Matriz["+c+"]["+f+"]\n"+salida+"\nElemento a buscar: "+b+"\nEl "+b+" aparece "+suma+" veces");
+	} //Fin de función main
+} //Fin de clase tarea22
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+salida = ""
+
+print("\nIngrese el numero de filas --> ")
+f = gets().to_i
+print("Ingrese el numero de columnas --> ")
+c = gets().to_i
+
+#Declaración de una matriz
+# nombre de la matriz = Array.new(variable de filas){Array.new(variable de columnas)}
+matriz = Array.new(f){Array.new(c)}
+print("\n")
+
+for i in (0...f)
+   for j in (0...c)
+      print("Ingrese el valor de matriz[#{i}][#{j}]: ")
+	  matriz[i][j] = gets().to_i
+   end
+end
+
+print("\nIngrese el valor a buscar: ")
+b = gets().to_i
+
+for i in (0...f)
+   for j in (0...c)
+      if(matriz[i][j] == b) then
+	     suma = suma.to_i + 1
+      end
+	  salida = salida + matriz[i][j].to_s + " "
+   end
+   salida = salida + "\n"
+end
+
+print("\nMatriz[#{f}][#{c}] \n#{salida}\nElemento a buscar: #{b}\nEl #{b} aparece #{suma} veces\n")
+</pre>
 		</div>
 	</div>
 	<div class="pie">

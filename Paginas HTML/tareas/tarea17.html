@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,9 +21,87 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				Elabore un programa que realice la busqueda de un número en un vector, mostrando
+				solamente un mensaje indicando cuántas veces apareció el número.<br><br>
+				Ejemplo:<br>
+				Valor a buscar: 4<br>
+				El número 4 apareció 2 veces en el vector [ 14 7 9 21 4 0 2 5 2 ] 
 			</p>
 		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea17{
+	public static void main (String[] args){
+		String entrada;
+		int i, n, b, suma=0;
+		String resultado = " . ";
+
+		entrada = JOptionPane.showInputDialog(null,"Ingrese la magnitud del vector:");
+		n = Integer.parseInt(entrada);
+		int[] vector = new int[n];
+
+		for(i=0; i< n; i++){
+			entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de vector["+i+"]:");
+			vector[i] = Integer.parseInt(entrada);
+		}
+
+		entrada = JOptionPane.showInputDialog(null,"Ingrese el valor a buscar:");
+		b = Integer.parseInt(entrada);
+
+		for(i=0; i< n; i++){
+			if(vector[i]==b){ suma = suma + 1; }
+		}
+
+		for(i=0; i< n; i++){
+			resultado = resultado + vector[i] + " . ";
+		}
+		JOptionPane.showMessageDialog(null,"Valor a buscar: "+b+"\nEl numero aparecio "+suma+" veces en el vector\n[ "+resultado+" ]");
+	} //Fin de función main
+} //Fin de clase tarea17
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+print("\nIngrese la magnitud del vector:\n -->")
+n = gets().to_i
+
+a = Array.new(n)
+suma = 0
+
+for i in(0...n)
+	print("Ingresa el valor de vector[#{i}]: ")
+	a[i] = gets().to_i
+end
+
+print("\nIngrese el valor a buscar:");
+b = gets().to_i
+
+for i in(0...n)
+	if (a[i]==b)then
+		suma = suma + 1
+	end
+end
+
+puts("Valor a buscar: #{b}")
+puts("El numero aparecio #{suma} veces en el vector")
+puts("#{a}")
+</pre>
+		</div>	
 	</div>
 	<div class="pie">
 		<p>&copy; 2017 || 1737535 

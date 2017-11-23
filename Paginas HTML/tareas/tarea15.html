@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,8 +21,67 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				<h3>Problema PS3.5</h3>
+				Construye un diagrama de flujo y el correspondiente programa en C que calcule e imprima la productoria de los N primeros números naturales.<br>
+				N sumatoria PI i desde i = 1
 			</p>
+		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea15{
+	public static void main (String[] args){
+		int i, n;
+		double a;
+		String entrada;
+		String serie = "";
+
+		entrada = JOptionPane.showInputDialog("Ingrese el numero de terminos: ");
+		n = Integer.parseInt(entrada);
+
+		for(i=1; i< n; i++){
+			a = 3.1416*i;
+			serie = serie + a + ", ";
+		}
+		a = 3.1416*i;
+		serie = serie + a + ".";
+		JOptionPane.showMessageDialog(null,serie);
+	} //Fin de función main
+} //Fin de clase tarea15
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+	=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+print("Ingrese el numero de terminos: ")
+n = gets().to_i
+
+serie = ""
+i = 1
+for i in(1...n)
+	a = 3.1416*i
+
+	serie = serie + a.to_s + ", "
+end
+
+a = 3.1416*i
+serie = serie + a.to_s + "."
+
+print(serie)
+</pre>
 		</div>
 	</div>
 	<div class="pie">

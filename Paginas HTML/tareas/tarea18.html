@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,9 +21,89 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				<h3>Problema PS5.1</h3>
+				Escribe un programa que, al dar como dato un arreglo unidimensional de números enteros, determine cuántos de ellos son positivos, cuántos negativos y cuántos nulos. <br>
+				Dato: VEC[N] (arreglo unidimensional de tipo entero de N elementos, 1 ≤ N ≤ 100).
 			</p>
 		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea18{
+	public static void main (String[] args){
+		String entrada;
+		int i, n, pos=0, neg=0, nul=0;
+		String resultado = " . ";
+
+		entrada = JOptionPane.showInputDialog(null,"Ingrese la magnitud del vector:");
+		n = Integer.parseInt(entrada);
+		int[] vector = new int[n];
+
+		for(i=0; i< n; i++){
+			entrada = JOptionPane.showInputDialog(null,"Ingrese el valor de vector["+i+"]:");
+			vector[i] = Integer.parseInt(entrada);
+		}
+
+		for(i=0; i< n; i++){
+			if(vector[i]>0){ pos = pos + 1; }
+			else if(vector[i]< 0){ neg = neg + 1;}
+			else {nul = nul + 1;}
+		}
+
+		for(i=0; i< n; i++){
+			resultado = resultado + vector[i] + " . ";
+		}
+
+		JOptionPane.showMessageDialog(null,"["+resultado+"]\nValores positivos: "+pos+"\nValores negativos: "+neg+"\nValores nulos: "+nul);
+	} //Fin de función main
+} //Fin de clase tarea18
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+print("\nIngrese la magnitud del vector:\n -->")
+n = gets().to_i
+
+a = Array.new(n)
+pos = 0
+neg = 0
+nul = 0
+
+for i in(0...n)
+	print("Ingresa el valor de vector[#{i}]: ")
+	a[i] = gets().to_i
+end
+
+for i in(0...n)
+	if (a[i]>0)then
+		pos = pos + 1
+	elsif (a[i]< 0)then
+		neg = neg + 1
+	else
+		nul = nul + 1
+	end
+end
+
+print("\n#{a}\n")
+puts("Valores positivos: #{pos}")
+puts("Valores negativos: #{neg}")
+puts("Valores nulos: #{nul}")
+</pre>
+		</div>	
 	</div>
 	<div class="pie">
 		<p>&copy; 2017 || 1737535 

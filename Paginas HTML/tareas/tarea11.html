@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,8 +21,69 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				Construir un programa que calcule e imprima la siguiente serie para los N 
+				primeros términos:<br>
+				1, 8, 243, 16384, 1953125, ...
 			</p>
+		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea11{
+	public static void main (String[] args){
+		String entrada;
+		String serie = "";
+		int n,i,a,b;
+
+		entrada = JOptionPane.showInputDialog("Ingrese el numero de terminos: ");
+		n = Integer.parseInt(entrada);
+
+		for (i=1; i< n; i++){
+			a = (i*2)-1;
+			b = (int)Math.pow(i,a);
+			serie = serie+b+", ";
+		} //Fin del ciclo for
+		a = (i*2)-1;
+		b = (int)Math.pow(i,a);
+		serie = serie+b+".";
+
+		JOptionPane.showMessageDialog(null,serie);
+	} //Fin de función main
+} //Fin de clase tarea11
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+print("Ingrese el total de numeros: ")
+n = gets().to_i
+serie = ""
+
+for i in (1...n)
+	a = (i*2)-1;
+	b = i**a
+	serie = serie + b.to_s+", "
+end
+
+a = (i*2)-1;
+b = i**a
+serie = serie + b.to_s+"."
+
+print(serie)
+</pre>
 		</div>
 	</div>
 	<div class="pie">

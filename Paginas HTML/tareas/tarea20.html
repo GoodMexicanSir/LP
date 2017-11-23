@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,8 +21,98 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				<h3>Problema PS5.6</h3>
+				En un arreglo unidimensional de tipo real se almacenan las calificaciones de un grupo de N alumnos que presentaron un examen de admisión a una universidad. Escribe un programa que calcule e imprima lo siguiente:<br>
+				<ol>
+					<li>El promedio general del grupo.</li>
+					<li>El porcentaje de alumnos aprobados (todos aquellos alumnos cuyo puntaje supere los 1300 puntos).</li><li>El número de alumnos cuya calificación sea mayor o igual a 1500.</li>
+				</ol>
+				Dato: ALU[N] (arreglo unidimensional de tipo real de N elementos, 1 ≤ N ≤ 100). 
 			</p>
+		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea20{
+	public static void main (String[] args){
+		String entrada;
+		int i, n,sum=0, prom=0, c =0, m=0;
+		double por=0.0;
+
+		entrada = JOptionPane.showInputDialog(null,"Ingrese la cantidad de alumnos:");
+		n = Integer.parseInt(entrada);
+		int[] vector = new int[n];
+
+		for(i=0; i< n; i++){
+			entrada = JOptionPane.showInputDialog(null,"Calificacion aprobatoria >= 1300\n\nIngrese la calificacion del alumno: "+(i+1));
+			vector[i] = Integer.parseInt(entrada);
+		}
+
+		for(i=0; i< n; i++){
+			sum = sum + vector[i];
+			if(vector[i]>=1300){
+				c = c + 1;
+				if(vector[i]>=1500){ m = m + 1;}
+			}
+		}
+		prom = sum/n;
+		por = (c*100)/n;
+
+		JOptionPane.showMessageDialog(null,"Promedio general del grupo: "+prom+"\nPorcentaje de alumnos aprobados: "+por+"%\nNumero de alumnos cuya calificacion es mayor o igual a 1500: "+m);
+	} //Fin de función main
+} //Fin de clase tarea20
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+sum = 0
+prom = 0
+c = 0
+m = 0
+por = 0.0
+
+print("\nIngrese la cantidad de alumnos:\n --> ")
+n = gets().to_i
+
+a = Array.new(n)
+
+for i in(0...n)
+	print("Ingrese la calificacion del alumno #{i+1} --> ")
+	a[i] = gets().to_i
+end
+
+for i in(0..n)
+	sum = sum + a[i].to_i
+	if( a[i].to_i >= 1300 )then
+		c = c + 1
+		if( a[i].to_i >=1500 )then
+			m = m + 1
+		end
+	end
+end
+
+prom = sum/n
+por = (c*100)/n
+
+print("\n")
+puts("Promedio general del grupo: #{prom}")
+puts("Porcentaje de alumnos aprobados: #{por}%")
+puts("Numero de alumnos cuya calificacion es mayor o igual a 1500: #{m}")
+</pre>
 		</div>
 	</div>
 	<div class="pie">

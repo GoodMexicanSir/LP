@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="barraN">
-		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.jpg"></a>
+		<a href="../inicio.html" title="Inicio"><img src="../../imagenes/casa.png"></a>
 		<tr>
 		<div id="cambiar">
 			<a href="../tareas.html" title="Menú de Tareas">Menú</a><a> ||</a>
@@ -21,8 +21,66 @@
 		</div>
 		<div class="caja">
 			<p class="texto">
-				
+				<h3>Problema PS5.3</h3>
+				Escribe un programa que almacene en un arreglo unidimensional los primeros 100 números de Fibonacci e imprima el arreglo correspondiente.
 			</p>
+		</div>
+		<h3>JAVA</h3><hr>
+		<div class="caja">
+<pre>
+/*	
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+*/
+
+import javax.swing.JOptionPane;
+public class tarea19{
+	public static void main (String[] args){
+		int fibo=1, i,a=1,b=0;
+		int[] vector = new int[100];
+		String serie = " . ";
+
+		for(i=1; i< 100; i++){
+			fibo = a + b;
+			a = b;
+			b = fibo;
+
+			vector[i] = fibo;
+		}
+
+		for(i=1; i< 100; i++){
+			serie = serie + vector[i] + " . ";
+		}
+		JOptionPane.showMessageDialog(null,"["+serie+"]");
+	} //Fin de función main
+} //Fin de clase tarea19
+</pre>
+		</div>
+		<h3>RUBY</h3><hr>
+		<div class="caja">
+<pre>
+=begin
+	Nombre: Leslie Estefanía Pérez Cerda
+	Matrícula: 1737535
+	Hora: Jueves V4-V6
+=end
+
+fibo = 1
+a = 1
+b = 0
+serie = Array.new(100)
+
+for i in(1..100)
+	fibo = a + b;
+	a = b;
+	b = fibo;
+
+	serie[i] = fibo;
+end
+
+puts(serie)
+</pre>
 		</div>
 	</div>
 	<div class="pie">
