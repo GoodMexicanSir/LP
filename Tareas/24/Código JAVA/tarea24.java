@@ -34,6 +34,7 @@ public class tarea24{
 			}
 		}
 
+		if()
 		for(i=0; i<c; i++){
 			for(j=0; j<f; j++){
 				matrizC[i][j] = matrizA[i][j] + matrizB[i][j];

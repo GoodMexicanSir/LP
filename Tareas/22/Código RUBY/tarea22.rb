@@ -4,7 +4,6 @@
 	Hora: Jueves V4-V6
 =end
 
-entrada = ""
 salida = ""
 
 print("\nIngrese el numero de filas --> ")

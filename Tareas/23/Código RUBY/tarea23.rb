@@ -4,8 +4,9 @@
 	Hora: Jueves V4-V6
 =end
 
-entrada = ""
-salida = ""
+salidaA = ""
+salidaB = ""
+salidaC = ""
 
 print("\nIngrese el numero de filas --> ")
 f = gets().to_i
@@ -14,27 +15,37 @@ c = gets().to_i
 
 #Declaración de una matriz
 # nombre de la matriz = Array.new(variable de filas){Array.new(variable de columnas)}
-matriz = Array.new(f){Array.new(c)}
+matrizA = Array.new(f){Array.new(c)}
+matrizB = Array.new(f){Array.new(c)}
+matrizC = Array.new(f){Array.new(c)}
 print("\n")
 
 for i in (0...f)
    for j in (0...c)
-      print("Ingrese el valor de matriz[#{i}][#{j}]: ")
-	  matriz[i][j] = gets().to_i
+      print("Ingrese el valor de A[#{i}][#{j}]: ")
+	  matrizA[i][j] = gets().to_i
    end
 end
 
-print("\nIngrese el valor a buscar: ")
-b = gets().to_i
+print("\n")
+for i in (0...f)
+   for j in (0...c)
+      print("Ingrese el valor de B[#{i}][#{j}]: ")
+     matrizB[i][j] = gets().to_i
+   end
+end
 
 for i in (0...f)
    for j in (0...c)
-      if(matriz[i][j] == b) then
-	     suma = suma.to_i + 1
-      end
-	  salida = salida + matriz[i][j].to_s + " "
+      matrizC[i][j] = matrizA[i][j] + matrizB[i][j]
+
+      salidaA = salidaA + matrizA[i][j].to_s + " "
+      salidaB = salidaB + matrizB[i][j].to_s + " "
+      salidaC = salidaC + matrizC[i][j].to_s + " "
    end
-   salida = salida + "\n"
+   salidaA = salidaA + "\n"
+   salidaB = salidaB + "\n"
+   salidaC = salidaC + "\n"
 end
 
-print("\nMatriz[#{f}][#{c}] \n#{salida}\nElemento a buscar: #{b}\nEl #{b} aparece #{suma} veces\n")
+print("\nA + B = C\n\n#{salidaA}\n+\n#{salidaB}\n=\n#{salidaC}")
